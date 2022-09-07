@@ -1,0 +1,51 @@
+body,
+html {
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: inherit;
+  overflow: hidden;
+  color: #2c2c2c;
+}
+
+h1,
+h2,
+p {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.output-container {
+  margin-top: 4rem;
+}
+
+button {
+  display: block;
+  width: 170px;
+  margin: 30px auto 0;
+  font-size: 1.1rem;
+  line-height: 2;
+  background-color: #e6f0ff;
+  border: 1px solid #3b3b54;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media all and (max-height: 410px) {
+  div {
+    position: static;
+  }
+}
+
+.phrase {
+  font-weight: bold;
+}
+
+.output {
+  font-style: italic;
+}
