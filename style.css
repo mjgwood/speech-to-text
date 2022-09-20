@@ -15,7 +15,9 @@ body {
 
 h1,
 h2,
-p {
+h3,
+p,
+form {
   font-family: sans-serif;
   text-align: center;
 }
@@ -26,12 +28,14 @@ p {
 
 button {
   display: block;
-  width: 170px;
+  width: 220px;
   margin: 30px auto 0;
+  padding: 5px;
   font-size: 1.1rem;
   line-height: 2;
-  background-color: #e6f0ff;
-  border: 1px solid #3b3b54;
+  background-color: #9f0f65;
+  color: #fff;
+  border: none;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -48,4 +52,18 @@ button {
 
 .output {
   font-style: italic;
+}
+
+.output p {
+  cursor: pointer;
+}
+
+.stt {
+  padding: 1rem;
+}
+
+.tts {
+  padding: 1rem;
+  background-color: #e6e6e6;
+  border: 2px dashed #414141;
 }

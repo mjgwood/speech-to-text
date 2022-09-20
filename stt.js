@@ -1,8 +1,8 @@
 var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
 var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList;
 var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent;
-var outputDiv = document.querySelector('.output');
 
+const outputDiv = document.querySelector('.output');
 const testBtn = document.querySelector('button');
 
 function testSpeech() {
@@ -23,7 +23,7 @@ function testSpeech() {
   recognition.onresult = function (event) {
     const speechResult = event.results[0][0].transcript.toLowerCase();
     const newPara = document.createElement('p');
-    newPara.textContent = speechResult;
+    newPara.textContent = speechResult + ' 🔊';
     outputDiv.appendChild(newPara);
 
     console.log('Confidence: ' + event.results[0][0].confidence);
@@ -32,7 +32,7 @@ function testSpeech() {
   recognition.onspeechend = function () {
     recognition.stop();
     testBtn.disabled = false;
-    testBtn.textContent = 'Say something else';
+    testBtn.textContent = 'Say something else 🎙️';
   };
 
   recognition.onaudiostart = function (event) {
